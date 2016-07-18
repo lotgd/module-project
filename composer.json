@@ -1,0 +1,22 @@
+{
+    "name": "lotgd/module-project",
+    "description": "Starter code for your own custom LotGD module.",
+    "type": "lotgd-module",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Austen McDonald",
+            "email": "austen.mcdonald@gmail.com"
+        }
+    ],
+    "extra": {
+        "subscriptions": [
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "LotGD\\Modules\\MyNamespace\\": "src/"
+        }
+    },
+    "require": {}
+}
