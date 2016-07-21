@@ -10,8 +10,8 @@
         }
     ],
     "extra": {
-        "subscriptions": [
-        ]
+        "class": "LotGD\\Modules\\MyNamespace\\MyModule",
+        "subscriptions": [ ]
     },
     "autoload": {
         "psr-4": {
