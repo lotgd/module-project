@@ -9,13 +9,9 @@
             "email": "austen.mcdonald@gmail.com"
         }
     ],
-    "extra": {
-        "class": "LotGD\\Modules\\MyNamespace\\MyModule",
-        "subscriptions": [ ]
-    },
     "autoload": {
         "psr-4": {
-            "LotGD\\Modules\\MyNamespace\\": "src/"
+            "MyVendor\\MyNamespace\\": "src/"
         }
     },
     "require": {}
