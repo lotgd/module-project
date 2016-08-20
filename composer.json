@@ -14,5 +14,11 @@
             "MyVendor\\MyNamespace\\": "src/"
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://code.lot.gd"
+        }
+    ],
     "require": {}
 }
