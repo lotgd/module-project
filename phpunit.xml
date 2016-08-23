@@ -1,9 +1,6 @@
 <phpunit bootstrap="vendor/autoload.php">
     <php>
-        <env name="LOTGD_TESTS_DATABASE_DSN" value="sqlite::memory:"/>
-        <env name="LOTGD_TESTS_DATABASE_USER" value="root"/>
-        <env name="LOTGD_TESTS_DATABASE_PASSWORD" value=""/>
-        <env name="LOTGD_TESTS_DATABASE_NAME" value="daenerys"/>
+        <env name="LOTGD_TESTS_CONFIG_PATH" value="./tests/lotgd.yml"/>
     </php>
     <testsuites>
         <testsuite name="All">
