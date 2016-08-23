@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4fd5227f09a12bb8395846897b523011",
-    "content-hash": "ad79fec7894738a00a630db5906e5276",
+    "hash": "75850d3ea49372045cdf35df89e7adb3",
+    "content-hash": "ba7ceb19c4be7ba7b12d6bda4702cf82",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1086,12 +1086,17 @@
         },
         {
             "name": "lotgd/core",
-            "version": "dev-feature/refactor-model-tests",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lotgd/core.git",
+                "reference": "db95b84452893a9660135a813fa648e5651c3b6a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../core",
-                "reference": "86751fc6d515371246593c8312233be1bbae9e7b",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/lotgd/core/zipball/db95b84452893a9660135a813fa648e5651c3b6a",
+                "reference": "db95b84452893a9660135a813fa648e5651c3b6a",
+                "shasum": ""
             },
             "require": {
                 "composer/composer": "*",
@@ -1121,7 +1126,12 @@
             "license": [
                 "AGPL-3.0"
             ],
-            "description": "Core functionality for Legend of the Green Dragon, a text-based RPG game."
+            "description": "Core functionality for Legend of the Green Dragon, a text-based RPG game.",
+            "support": {
+                "source": "https://github.com/lotgd/core/tree/master",
+                "issues": "https://github.com/lotgd/core/issues"
+            },
+            "time": "2016-08-22 08:48:51"
         },
         {
             "name": "monolog/monolog",
