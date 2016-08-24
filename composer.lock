@@ -1090,12 +1090,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lotgd/core.git",
-                "reference": "db95b84452893a9660135a813fa648e5651c3b6a"
+                "reference": "135dd22939585afae61e002310006527a2dce683"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lotgd/core/zipball/db95b84452893a9660135a813fa648e5651c3b6a",
-                "reference": "db95b84452893a9660135a813fa648e5651c3b6a",
+                "url": "https://api.github.com/repos/lotgd/core/zipball/135dd22939585afae61e002310006527a2dce683",
+                "reference": "135dd22939585afae61e002310006527a2dce683",
                 "shasum": ""
             },
             "require": {
@@ -1128,10 +1128,10 @@
             ],
             "description": "Core functionality for Legend of the Green Dragon, a text-based RPG game.",
             "support": {
-                "source": "https://github.com/lotgd/core/tree/master",
+                "source": "https://github.com/lotgd/core/tree/feature/fix-game-getters",
                 "issues": "https://github.com/lotgd/core/issues"
             },
-            "time": "2016-08-22 08:48:51"
+            "time": "2016-08-23 22:33:46"
         },
         {
             "name": "monolog/monolog",
