@@ -39,6 +39,7 @@ class ModuleTest extends ModelTestCase
         // handleEvent() calls may expect the module be registered (for example,
         // if they read properties from the model).
         $this->moduleModel = new ModuleModel(self::Library);
+        $this->moduleModel->save($this->getEntityManager());
         Module::onRegister($this->g, $this->moduleModel);
     }
 
@@ -47,6 +48,10 @@ class ModuleTest extends ModelTestCase
         parent::tearDown();
 
         Module::onUnregister($this->g, $this->moduleModel);
+        $m = $this->getEntityManager()->getRepository(ModuleModel::class)->find(self::Library);
+        if ($m) {
+            $m->delete($this->getEntityManager());
+        }
     }
 
     // TODO for LotGD staff: this test assumes the schema in their yaml file
@@ -56,6 +61,8 @@ class ModuleTest extends ModelTestCase
     public function testUnregister()
     {
         Module::onUnregister($this->g, $this->moduleModel);
+        $m = $this->getEntityManager()->getRepository(ModuleModel::class)->find(self::Library);
+        $m->delete($this->getEntityManager());
 
         // Assert that databases are the same before and after.
         // TODO for module author: update list of tables below to include the
