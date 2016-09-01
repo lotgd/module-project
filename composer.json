@@ -22,5 +22,9 @@
     ],
     "require": {
         "lotgd/core": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.1|^5.1",
+        "phpunit/dbunit": "*"
     }
 }
