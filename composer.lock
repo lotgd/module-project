@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "70529e719eb710b859810c859cb2b320",
-    "content-hash": "8560a99914e1d4c6e4a6d1ce5f28398d",
+    "hash": "bfc358f046861eb77f10d4d4b9003b37",
+    "content-hash": "762b5fe470eca812130415a8c1a4fb1e",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1087,7 +1087,7 @@
         },
         {
             "name": "lotgd/core",
-            "version": "dev-master",
+            "version": "v0.1.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lotgd/core.git",
@@ -3038,7 +3038,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "lotgd/core": 20
+        "lotgd/core": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,
