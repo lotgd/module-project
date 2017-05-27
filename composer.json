@@ -7,6 +7,10 @@
         {
             "name": "Austen McDonald",
             "email": "austen.mcdonald@gmail.com"
+        },
+        {
+            "name": "Basilius Sauter",
+            "email": "basilius.sauter@gmail.com"
         }
     ],
     "autoload": {
@@ -21,7 +25,7 @@
         }
     ],
     "require": {
-        "lotgd/core": "0.1.0-alpha"
+        "lotgd/core": "^0.3.0-alpha"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.1|^5.1",

@@ -41,10 +41,16 @@ class ModuleTest extends ModelTestCase
         $this->moduleModel = new ModuleModel(self::Library);
         $this->moduleModel->save($this->getEntityManager());
         Module::onRegister($this->g, $this->moduleModel);
+
+        $this->g->getEntityManager()->flush();
+        $this->g->getEntityManager()->clear();
     }
 
     public function tearDown()
     {
+        $this->g->getEntityManager()->flush();
+        $this->g->getEntityManager()->clear();
+
         parent::tearDown();
 
         Module::onUnregister($this->g, $this->moduleModel);
@@ -79,7 +85,12 @@ class ModuleTest extends ModelTestCase
     public function testHandleUnknownEvent()
     {
         // Always good to test a non-existing event just to make sure nothing happens :).
-        $context = [];
-        Module::handleEvent($this->g, 'e/lotgd/tests/unknown-event', $context);
+        $context = new \LotGD\Core\Events\EventContext(
+            "e/lotgd/tests/unknown-event",
+            "none",
+            \LotGD\Core\Events\EventContextData::create([])
+        );
+
+        Module::handleEvent($this->g, $context);
     }
 }
