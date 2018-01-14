@@ -13,7 +13,7 @@ class Module implements ModuleInterface {
     {
         return $context;
     }
-    
+
     public static function onRegister(Game $g, ModuleModel $module) { }
     public static function onUnregister(Game $g, ModuleModel $module) { }
 }
