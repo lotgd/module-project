@@ -15,7 +15,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "MyVendor\\MyNamespace\\": "src/"
+            "MyVendor\\MyNamespace\\": "src/",
+            "MyVendor\\MyNamespace\\Tests\\": "tests/"
         }
     },
     "repositories": [
