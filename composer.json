@@ -33,5 +33,10 @@
         "symfony/yaml": "*"
     },
     "minimum-stability": "dev",
-    "prefer-stable" : true
+    "prefer-stable" : true,
+    "scripts": {
+        "post-create-project-cmd": [
+            "rm .github/workflows/update-package-index.yml"
+        ]
+    }
 }
