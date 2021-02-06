@@ -11,7 +11,7 @@ use MyVendor\MyNamespace\Module;
 
 class ModuleTest extends ModuleTestCase
 {
-    protected $dataset = "module";
+    protected string $dataset = "module";
 
     // TODO for LotGD staff: this test assumes the schema in their yaml file
     // reflects all columns in the core's models of characters, scenes and modules.
@@ -27,15 +27,10 @@ class ModuleTest extends ModuleTestCase
         // TODO for module author: update list of tables below to include the
         // tables you modify during registration/unregistration.
         $tableList = [
-            'characters', 'scenes', 'modules',
+            'characters', 'scenes', 'modules'
         ];
 
-        $after = $this->getConnection()->createDataSet($tableList);
-        $before = $this->getDataSet();
-
-        foreach($tableList as $table) {
-            $this->assertSame($before->getTable($table)->getRowCount(), $after->getTable($table)->getRowCount());
-        }
+        $this->assertDataWasKeptIntact($this->getDataSet(), $this->getConnection()[0], $tableList);
 
         // Since tearDown() contains an onUnregister() call, this also tests
         // double-unregistering, which should be properly supported by modules.
@@ -50,6 +45,8 @@ class ModuleTest extends ModuleTestCase
             \LotGD\Core\Events\EventContextData::create([])
         );
 
-        Module::handleEvent($this->g, $context);
+        $newContext = Module::handleEvent($this->g, $context);
+
+        $this->assertSame($context, $newContext);
     }
 }
